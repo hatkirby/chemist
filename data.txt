@@ -8,16 +8,19 @@ PRIMARY
 {NAME} is {CLASS:indefinite} approved for treatment of {syndrome}, {syndrome}, and {syndrome}.
 {NAME} is {CLASS:indefinite} used for {syndrome} and {syndrome}.
 {NAME} is {CLASS:indefinite} used with {existent} to treat {syndrome}.
+{NAME} is {CLASS:indefinite} used in cases of {EXISTENT} overdose.
+{NAME} is {CLASS:indefinite} used recreationally as {CLASS:indefinite}.
 
 SECONDARY
-Developed in {year} in response to the Great {Noun} Epidemic in {Region}.
+Developed in {year} due to the Great {Noun} Epidemic in {Region}.
 Frequently prescribed off-label for {syndrome}.
 Sometimes used for {syndrome} because of its {verbing} effect.
 Illegal to own in the US because of its {verbing} effect.
-Developed in {year} to replace {existent}.
-Overtook {existent} as the primary treatment, having fewer side effects.
+Developed in {year} to replace {EXISTENT}.
+Overtook {EXISTENT} as the primary treatment, having fewer side effects.
 Synthesized by {FamousName} in {year} in a {verbing} accident.
-Used mainly in {year}, before {existent} became popular.
+Used mainly in {year}, before {EXISTENT} became popular.
+Only legal in {Region} because of its {verbing} effect.
 
 SYNDROME
 Irritable {Noun} Syndrome
@@ -25,8 +28,13 @@ Irritable {Noun} Syndrome
 Severe {Noun}
 Major {Adjective} Disorder
 {Adjective} {Noun} Disorder
-Obsessive {Adjective} Disorder
+Obsessive {Noun} Disorder
 Clinical {Noun}
+{Adjective} Personality Disorder
+Respiratory {Adjective} Disease
+{Bodypart} Cancer
+Restless {Bodypart}
+{Bodypart} Failure
 
 CLASS
 analgesic
@@ -81,64 +89,65 @@ antibiotic
 antiviral drug
 stimulant
 depressant
+aphrodisiac
 
 EXISTENT
-Fluoxetine
+fluoxetine
 Prozac
-Sertraline
+sertraline
 Zoloft
-Escitalopram
+escitalopram
 Lexapro
-Venlafaxine
+venlafaxine
 Effexor
-Aripiprazole
+aripiprazole
 Abilify
-Alprazolam
+alprazolam
 Xanax
-Diazepam
+diazepam
 Valium
-Lamotrigine
+lamotrigine
 Lamictal
-Gabapentin
+gabapentin
 Neurontin
-Acetaminophen
+acetaminophen
 Tylenol
-Ibuprofin
+ibuprofin
 Advil
-Lurasidone
+lurasidone
 Latuda
-Lithium
-Activated charcoal
-Estradiol
+lithium
+activated charcoal
+estradiol
 AndroGel
-Ziprasidone
+ziprasidone
 Geodon
-Risperidone
+risperidone
 Risperdal
-Quetiapine
+quetiapine
 Seroquel
 Cymbalta
-Duloxetine
-Bupropion
+duloxetine
+bupropion
 Welbutrin
-Buspirone
+buspirone
 Buspar
-Oxycontin
+oxycontin
 Oxycodone
 Concerta
-Methylphenidate
+methylphenidate
 Ritalin
 Vyvanse
-Lisdexamfetamine
+lisdexamfetamine
 Adderall
-Epinephrine
-Adrenaline
-Testosterone gel
+epinephrine
+adrenaline
+testosterone gel
 Cialis
 Viagra
-Heroin
-Morphine
-Crystal meth
+heroin
+morphine
+crystal meth
 
 NAME
 {PRENAME}{NAMEMID}{NAMEIFX}

@@ -98,6 +98,10 @@ int main(int argc, char** argv)
         auto person = database.nouns().with_singular_form("person").limit(1).run().front();
         auto ptypes = database.nouns().full_hyponym_of({person}).is_class().random().limit(1).run().front();
         result = database.nouns().instance_of({ptypes}).random().limit(1).run().front().singular_form();
+      } else if (canontkn == "BODYPART")
+      {
+        auto bp = database.nouns().with_singular_form("body part").limit(1).run().front();
+        result = database.nouns().full_hyponym_of({bp}).random().limit(1).run().front().singular_form();
       } else {
         auto group = groups[canontkn];
         result = group[rand() % group.size()];
