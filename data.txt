@@ -1,0 +1,226 @@
+MAIN
+{PRIMARY} {SECONDARY}
+
+PRIMARY
+{NAME} is {CLASS:indefinite} commonly used to treat {syndrome}.
+{NAME} is {CLASS:indefinite} primarily used for {syndrome}.
+{NAME} is {CLASS:indefinite} prescribed for {syndrome}.
+{NAME} is {CLASS:indefinite} approved for treatment of {syndrome}, {syndrome}, and {syndrome}.
+{NAME} is {CLASS:indefinite} used for {syndrome} and {syndrome}.
+{NAME} is {CLASS:indefinite} used with {existent} to treat {syndrome}.
+
+SECONDARY
+Developed in {year} in response to the Great {Noun} Epidemic in {Region}.
+Frequently prescribed off-label for {syndrome}.
+Sometimes used for {syndrome} because of its {verbing} effect.
+Illegal to own in the US because of its {verbing} effect.
+Developed in {year} to replace {existent}.
+Overtook {existent} as the primary treatment, having fewer side effects.
+Synthesized by {FamousName} in {year} in a {verbing} accident.
+Used mainly in {year}, before {existent} became popular.
+
+SYNDROME
+Irritable {Noun} Syndrome
+{Adjective} {Noun} Syndrome
+Severe {Noun}
+Major {Adjective} Disorder
+{Adjective} {Noun} Disorder
+Obsessive {Adjective} Disorder
+Clinical {Noun}
+
+CLASS
+analgesic
+painkiller
+anaesthetic
+antihistamine
+anticonvulsant
+antiepileptic
+antidepressant
+antimigraine
+antipsychotic
+benzodiazepine
+antiparkinsonian
+immunosuppressive
+antianaemia
+anticoagulant
+blood thinner
+antiarrhythmic
+antithrombotic
+antifungal
+anti-infective
+anti-inflammatory
+disinfectant
+antispetic
+antiemetic
+diuretic
+opiod painkiller
+antiulcer
+laxative
+sedative
+hormone
+estrogen
+androgen
+contraceptive
+ovulation inducer
+thyroid stimulant
+antithyroid
+insulin
+vaccine
+oxytocin
+SSRI
+anxiolytic
+antipanic agent
+tricyclic
+MAOI
+SNRI
+antiandrogen
+psychedelic
+vitamin
+probiotic
+antibiotic
+antiviral drug
+stimulant
+depressant
+
+EXISTENT
+Fluoxetine
+Prozac
+Sertraline
+Zoloft
+Escitalopram
+Lexapro
+Venlafaxine
+Effexor
+Aripiprazole
+Abilify
+Alprazolam
+Xanax
+Diazepam
+Valium
+Lamotrigine
+Lamictal
+Gabapentin
+Neurontin
+Acetaminophen
+Tylenol
+Ibuprofin
+Advil
+Lurasidone
+Latuda
+Lithium
+Activated charcoal
+Estradiol
+AndroGel
+Ziprasidone
+Geodon
+Risperidone
+Risperdal
+Quetiapine
+Seroquel
+Cymbalta
+Duloxetine
+Bupropion
+Welbutrin
+Buspirone
+Buspar
+Oxycontin
+Oxycodone
+Concerta
+Methylphenidate
+Ritalin
+Vyvanse
+Lisdexamfetamine
+Adderall
+Epinephrine
+Adrenaline
+Testosterone gel
+Cialis
+Viagra
+Heroin
+Morphine
+Crystal meth
+
+NAME
+{PRENAME}{NAMEMID}{NAMEIFX}
+
+PRENAME
+Oxy
+Ari
+Zi
+Quetia
+Mor
+Her
+Cia
+Via
+He
+Con
+Flu
+Ser
+Es
+Ven
+Al
+Dia
+Lamo
+Gaba
+Aceta
+Ibu
+Lura
+Ris
+Li
+Estra
+Du
+Bus
+Epin
+
+NAMEMID
+pipra
+pi
+to
+stero
+cer
+oxe
+tra
+cita
+lo
+la
+fa
+pra
+zo
+ze
+tri
+pen
+mino
+pro
+si
+peri
+thi
+loxe
+con
+epher
+{NAMEMID}
+{NAMEMID}
+
+NAMEIFX
+zole
+ne
+tine
+lin
+tamine
+gra
+phine
+ta
+line
+pram
+xine
+lam
+pam
+gine
+tin
+phen
+fin
+done
+um
+diol
+tin
+rone
+ine
