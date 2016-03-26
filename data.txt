@@ -206,8 +206,8 @@ thi
 loxe
 con
 epher
-{NAMEMID}
-{NAMEMID}
+{NAMEMID}{NAMEMID}
+{NAMEMID}{NAMEMID}
 
 NAMEIFX
 zole
