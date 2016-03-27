@@ -2,41 +2,44 @@ MAIN
 {PRIMARY} {SECONDARY}
 
 PRIMARY
-{NAME} is {CLASS:indefinite} commonly used to treat {syndrome}.
-{NAME} is {CLASS:indefinite} primarily used for {syndrome}.
-{NAME} is {CLASS:indefinite} prescribed for {syndrome}.
-{NAME} is {CLASS:indefinite} approved for treatment of {syndrome}, {syndrome}, and {syndrome}.
-{NAME} is {CLASS:indefinite} used for {syndrome} and {syndrome}.
-{NAME} is {CLASS:indefinite} used with {existent} to treat {syndrome}.
+{NAME} is {CLASS:indefinite} commonly used to treat {SYNDROME}.
+{NAME} is {CLASS:indefinite} primarily used for {SYNDROME}.
+{NAME} is {CLASS:indefinite} prescribed for {SYNDROME}.
+{NAME} is {CLASS:indefinite} approved for treatment of {SYNDROME}, and {SYNDROME}.
+{NAME} is {CLASS:indefinite} used for {SYNDROME} and {SYNDROME}.
+{NAME} is {CLASS:indefinite} used with {EXISTENT} to treat {syndrome}.
 {NAME} is {CLASS:indefinite} used in cases of {EXISTENT} overdose.
 {NAME} is {CLASS:indefinite} used recreationally as {CLASS:indefinite}.
+{NAME} is {CLASS:indefinite} used recreationally for {verbing}.
 
 SECONDARY
-Developed in {year} due to the Great {Noun} Epidemic in {Region}.
-Frequently prescribed off-label for {syndrome}.
-Sometimes used for {syndrome} because of its {verbing} effect.
+Developed due to the Great {Noun} Epidemic of {year} in {Region}.
+Frequently prescribed off-label for {SYNDROME}.
+Sometimes used for {SYNDROME} because of its {verbing} effect.
 Illegal to own in the US because of its {verbing} effect.
 Developed in {year} to replace {EXISTENT}.
-Overtook {EXISTENT} as the primary treatment, having fewer side effects.
+Overtook {EXISTENT} due to its {adjective} effect.
 Synthesized by {FamousName} in {year} in a {verbing} accident.
 Used mainly in {year}, before {EXISTENT} became popular.
 Only legal in {Region} because of its {verbing} effect.
 
 SYNDROME
-Irritable {Noun} Syndrome
-{Adjective} {Noun} Syndrome
-Severe {Noun}
-Major {Adjective} Disorder
-{Adjective} {Noun} Disorder
-Obsessive {Noun} Disorder
-Clinical {Noun}
-{Adjective} Personality Disorder
-Respiratory {Adjective} Disease
-{Bodypart} Cancer
-Restless {Bodypart}
-{Bodypart} Failure
-Congenital {Noun} Disease
+irritable {noun} syndrome
+{adjective} {noun} syndrome
+severe {noun}
+major {adjective} disorder
+{adjective} {noun} disorder
+obsessive {noun} disorder
+clinical {noun}
+{adjective} personality disorder
+respiratory {adjective} disease
+{bodypart} cancer
+restless {bodypart}
+{bodypart} failure
+congenital {noun} disease
 {FamousName}'s disease
+{adjective} fever
+hypo{noun}ism
 
 CLASS
 analgesic
@@ -60,7 +63,7 @@ antifungal
 anti-infective
 anti-inflammatory
 disinfectant
-antispetic
+antiseptic
 antiemetic
 diuretic
 opiod painkiller
@@ -182,6 +185,17 @@ Estra
 Du
 Bus
 Epin
+Co
+Lido
+Pro
+Pri
+Bu
+Levo
+Ro
+Me
+Dibu
+Des
+Ha
 
 NAMEMID
 pipra
@@ -208,6 +222,12 @@ thi
 loxe
 con
 epher
+piva
+bupi
+va
+piva
+flu
+oxy
 {NAMEMID}{NAMEMID}
 {NAMEMID}{NAMEMID}
 
@@ -235,3 +255,6 @@ diol
 tin
 rone
 ine
+caine
+rane
+ide

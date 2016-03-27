@@ -75,10 +75,10 @@ int main(int argc, char** argv)
       std::string result;
       if (canontkn == "NOUN")
       {
-        result = database.nouns().is_not_proper().random().limit(1).run().front().singular_form();
+        result = database.nouns().is_not_proper().random().limit(1).with_complexity(1).run().front().singular_form();
       } else if (canontkn == "ADJECTIVE")
       {
-        result = database.adjectives().random().limit(1).run().front().base_form();
+        result = database.adjectives().with_complexity(1).random().limit(1).run().front().base_form();
       } else if (canontkn == "VERBING")
       {
         result = database.verbs().random().limit(1).run().front().ing_form();
@@ -101,7 +101,7 @@ int main(int argc, char** argv)
       } else if (canontkn == "BODYPART")
       {
         auto bp = database.nouns().with_singular_form("body part").limit(1).run().front();
-        result = database.nouns().full_hyponym_of({bp}).random().limit(1).run().front().singular_form();
+        result = database.nouns().full_hyponym_of({bp}).with_complexity(1).random().limit(1).run().front().singular_form();
       } else {
         auto group = groups[canontkn];
         result = group[rand() % group.size()];
