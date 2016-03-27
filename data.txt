@@ -35,6 +35,8 @@ Respiratory {Adjective} Disease
 {Bodypart} Cancer
 Restless {Bodypart}
 {Bodypart} Failure
+Congenital {Noun} Disease
+{FamousName}'s disease
 
 CLASS
 analgesic
