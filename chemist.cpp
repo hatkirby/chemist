@@ -5,6 +5,7 @@
 #include <sstream>
 #include <twitcurl.h>
 #include <verbly.h>
+#include <unistd.h>
 
 int main(int argc, char** argv)
 {
