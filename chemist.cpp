@@ -1,23 +1,24 @@
 #include <yaml-cpp/yaml.h>
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
 #include <sstream>
-#include <twitcurl.h>
 #include <verbly.h>
-#include <unistd.h>
+#include <fstream>
+#include <twitter.h>
+#include <random>
+#include <chrono>
+#include <thread>
 
 int main(int argc, char** argv)
 {
-  srand(time(NULL));
-  
   YAML::Node config = YAML::LoadFile("config.yml");
-    
-  twitCurl twitter;
-  twitter.getOAuth().setConsumerKey(config["consumer_key"].as<std::string>());
-  twitter.getOAuth().setConsumerSecret(config["consumer_secret"].as<std::string>());
-  twitter.getOAuth().setOAuthTokenKey(config["access_key"].as<std::string>());
-  twitter.getOAuth().setOAuthTokenSecret(config["access_secret"].as<std::string>());
+  
+  twitter::auth auth;
+  auth.setConsumerKey(config["consumer_key"].as<std::string>());
+  auth.setConsumerSecret(config["consumer_secret"].as<std::string>());
+  auth.setAccessKey(config["access_key"].as<std::string>());
+  auth.setAccessSecret(config["access_secret"].as<std::string>());
+  
+  twitter::client client(auth);
   
   std::map<std::string, std::vector<std::string>> groups;
   std::ifstream datafile("data.txt");
@@ -51,6 +52,9 @@ int main(int argc, char** argv)
     }
   }
   
+  std::random_device random_device;
+  std::mt19937 random_engine{random_device()};
+  
   verbly::data database {"data.sqlite3"};
   for (;;)
   {
@@ -77,6 +81,9 @@ int main(int argc, char** argv)
       if (canontkn == "NOUN")
       {
         result = database.nouns().is_not_proper().random().limit(1).with_complexity(1).run().front().singular_form();
+      } else if (canontkn == "ATTRIBUTE")
+      {
+        result = database.nouns().random().limit(1).full_hyponym_of(database.nouns().with_wnid(100024264).limit(1).run().front()).run().front().singular_form();
       } else if (canontkn == "ADJECTIVE")
       {
         result = database.adjectives().with_complexity(1).random().limit(1).run().front().base_form();
@@ -85,7 +92,9 @@ int main(int argc, char** argv)
         result = database.verbs().random().limit(1).run().front().ing_form();
       } else if (canontkn == "YEAR")
       {
-        result = std::to_string(rand() % 100 + 1916);
+        std::uniform_int_distribution<int> yeardist(1916,2015);
+        int year = yeardist(random_engine);
+        result = std::to_string(year);
       } else if (canontkn == "REGION")
       {
         auto hem1 = database.nouns().with_singular_form("eastern hemisphere").limit(1).run().front();
@@ -103,9 +112,14 @@ int main(int argc, char** argv)
       {
         auto bp = database.nouns().with_singular_form("body part").limit(1).run().front();
         result = database.nouns().full_hyponym_of({bp}).with_complexity(1).random().limit(1).run().front().singular_form();
+      } else if (canontkn == "\\N")
+      {
+        result = "\n";
       } else {
         auto group = groups[canontkn];
-        result = group[rand() % group.size()];
+        std::uniform_int_distribution<int> groupdist(0, group.size()-1);
+        int groupind = groupdist(random_engine);
+        result = group[groupind];
       }
       
       if (modifier == "indefinite")
@@ -144,18 +158,19 @@ int main(int argc, char** argv)
     }
     
     action.resize(140);
-
-    std::string replyMsg;
-    if (twitter.statusUpdate(action))
+    
+    try
     {
-      twitter.getLastWebResponse(replyMsg);
-      std::cout << "Twitter message: " << replyMsg << std::endl;
-    } else {
-      twitter.getLastCurlError(replyMsg);
-      std::cout << "Curl error: " << replyMsg << std::endl;
+      client.updateStatus(action);
+      
+      std::cout << "Tweeted!" << std::endl;
+    } catch (const twitter::twitter_error& e)
+    {
+      std::cout << "Twitter error: " << e.what() << std::endl;
     }
     
-    std::cout << "Waiting" << std::endl;
-    sleep(60 * 60);
+    std::cout << "Waiting..." << std::endl;
+    
+    std::this_thread::sleep_for(std::chrono::hours(1));
   }
 }

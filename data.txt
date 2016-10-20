@@ -1,27 +1,27 @@
 MAIN
-{PRIMARY} {SECONDARY}
+{NAME} ({CLASS}){\n}{PRIMARY}{\n}{SECONDARY}
 
 PRIMARY
-{NAME} is {CLASS:indefinite} commonly used to treat {SYNDROME}.
-{NAME} is {CLASS:indefinite} primarily used for {SYNDROME}.
-{NAME} is {CLASS:indefinite} prescribed for {SYNDROME}.
-{NAME} is {CLASS:indefinite} approved for treatment of {SYNDROME}, and {SYNDROME}.
-{NAME} is {CLASS:indefinite} used for {SYNDROME} and {SYNDROME}.
-{NAME} is {CLASS:indefinite} used with {EXISTENT} to treat {syndrome}.
-{NAME} is {CLASS:indefinite} used in cases of {EXISTENT} overdose.
-{NAME} is {CLASS:indefinite} used recreationally as {CLASS:indefinite}.
-{NAME} is {CLASS:indefinite} used recreationally for {verbing}.
+Used to treat {SYNDROME}
+Treats the {adjective} symptoms of {SYNDROME}
+Cures {SYNDROME}
+Approved to treat {SYNDROME} and {SYNDROME}
+Prescribed for {SYNDROME}
+Used with {EXISTENT} to treat {SYNDROME}
+Used recreationally as {CLASS:indefinite}
+Used recreationally for {verbing}
 
 SECONDARY
-Developed due to the Great {Noun} Epidemic of {year} in {Region}.
-Frequently prescribed off-label for {SYNDROME}.
-Sometimes used for {SYNDROME} because of its {verbing} effect.
-Illegal to own in the US because of its {verbing} effect.
-Developed in {year} to replace {EXISTENT}.
-Overtook {EXISTENT} due to its {adjective} effect.
-Synthesized by {FamousName} in {year} in a {verbing} accident.
-Used mainly in {year}, before {EXISTENT} became popular.
-Only legal in {Region} because of its {verbing} effect.
+Developed after {year} {Noun} Pandemic
+Often used off-label for {SYNDROME}
+Notable for its {adjective} effect
+Controlled in the US due to its {adjective} effect
+Developed in {year} to replace {EXISTENT}
+May cause {ADJECTIVE} feelings
+Obsoleted by {EXISTENT}
+Contraindicated by {SYNDROME}
+Contraindicated by {EXISTENT}
+Decreases the {adjective} effects of {EXISTENT}
 
 SYNDROME
 irritable {noun} syndrome
@@ -40,6 +40,16 @@ congenital {noun} disease
 {FamousName}'s disease
 {adjective} fever
 hypo{noun}ism
+{EXISTENT} overdose
+{CLASS} overdose
+{CLASS} discontinuation syndrome
+{noun} syndrome
+low {ATTRIBUTE}
+
+CLASSIFIER
+{CLASS:indefinite}
+{NAME}
+{EXISTENT}
 
 CLASS
 analgesic
@@ -84,6 +94,7 @@ SSRI
 anxiolytic
 antipanic agent
 tricyclic
+tetracyclic
 MAOI
 SNRI
 antiandrogen
@@ -95,6 +106,7 @@ antiviral drug
 stimulant
 depressant
 aphrodisiac
+{EXISTENT} prodrug
 
 EXISTENT
 fluoxetine
@@ -153,6 +165,10 @@ Viagra
 heroin
 morphine
 crystal meth
+mirtazapine
+Remeron
+Luvox
+fluvoxamine
 
 NAME
 {PRENAME}{NAMEMID}{NAMEIFX}
@@ -196,6 +212,7 @@ Me
 Dibu
 Des
 Ha
+Mir
 
 NAMEMID
 pipra
@@ -228,6 +245,7 @@ va
 piva
 flu
 oxy
+taz
 {NAMEMID}{NAMEMID}
 {NAMEMID}{NAMEMID}
 
@@ -258,3 +276,4 @@ ine
 caine
 rane
 ide
+epine
