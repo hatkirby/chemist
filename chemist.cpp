@@ -10,7 +10,14 @@
 
 int main(int argc, char** argv)
 {
-  YAML::Node config = YAML::LoadFile("config.yml");
+  if (argc != 2)
+  {
+    std::cout << "usage: chemist [configfile]" << std::endl;
+    return -1;
+  }
+
+  std::string configfile(argv[1]);
+  YAML::Node config = YAML::LoadFile(configfile);
   
   twitter::auth auth;
   auth.setConsumerKey(config["consumer_key"].as<std::string>());
@@ -21,10 +28,10 @@ int main(int argc, char** argv)
   twitter::client client(auth);
   
   std::map<std::string, std::vector<std::string>> groups;
-  std::ifstream datafile("data.txt");
+  std::ifstream datafile(config["forms_file"].as<std::string>());
   if (!datafile.is_open())
   {
-    std::cout << "Could not find data.txt" << std::endl;
+    std::cout << "Could not find datafile" << std::endl;
     return 1;
   }
   
@@ -55,7 +62,7 @@ int main(int argc, char** argv)
   std::random_device random_device;
   std::mt19937 random_engine{random_device()};
   
-  verbly::data database {"data.sqlite3"};
+  verbly::data database {config["verbly_datafile"].as<std::string>()};
   for (;;)
   {
     std::cout << "Generating tweet" << std::endl;
